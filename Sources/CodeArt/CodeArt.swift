@@ -8,6 +8,11 @@ public class CodeArt {
         return self.colorFromHexString(hex: "006736")
     }
     
+    /// Returns an object of 'UIColor' with teh second most eye-pleasing color known to all humanity
+    public static var secondaryCodeArtColor: UIColor {
+        return self.colorFromHexString(hex: "FCFFFD")
+    }
+    
     /// Allows you to convert a 6 digit hexadecimal string into a UIColor instance
     /// - Warning: The '#' symbol is stripped from the beginning of the string submitted here
     /// - Parameters:

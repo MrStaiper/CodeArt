@@ -11,9 +11,15 @@ final class CodeArtTests: XCTestCase {
         let color = CodeArt.colorFromHexString(hex: "006736")
         XCTAssertEqual(color, CodeArt.codeArtColor)
     }
+    
+    func testSecondaryColorPallete () {
+        let color = CodeArt.colorFromHexString(hex: "FCFFFD")
+        XCTAssertEqual(color, CodeArt.secondaryCodeArtColor)
+    }
 
     static var allTests = [
         ("testColorPallete", testColorPallete),
-        ("testCodeArtEqual",testCodeArtEqual),
+        ("testCodeArtEqual", testCodeArtEqual),
+        ("testSecondaryColorPallete", testSecondaryColorPallete),
     ]
 }
