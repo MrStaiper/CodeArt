@@ -21,9 +21,12 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		OBJ_23 /* CodeArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* CodeArt.swift */; };
+		0D46E6D7255739AF00ADA92E /* CodeArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D46E6D6255739AF00ADA92E /* CodeArt.swift */; };
+		0D46E6DD25573BE600ADA92E /* CodeArtNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D46E6DC25573BE600ADA92E /* CodeArtNetworkingTests.swift */; };
+		0D46E6E32558957C00ADA92E /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D46E6E22558957C00ADA92E /* Networking.swift */; };
+		OBJ_23 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* ColorUtils.swift */; };
 		OBJ_30 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_41 /* CodeArtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* CodeArtTests.swift */; };
+		OBJ_41 /* CodeArtColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* CodeArtColorTests.swift */; };
 		OBJ_42 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
 		OBJ_44 /* CodeArt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CodeArt::CodeArt::Product" /* CodeArt.framework */; };
 /* End PBXBuildFile section */
@@ -46,13 +49,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D46E6D6255739AF00ADA92E /* CodeArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeArt.swift; sourceTree = "<group>"; };
+		0D46E6DC25573BE600ADA92E /* CodeArtNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeArtNetworkingTests.swift; sourceTree = "<group>"; };
+		0D46E6E22558957C00ADA92E /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		"CodeArt::CodeArt::Product" /* CodeArt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CodeArt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CodeArt::CodeArtTests::Product" /* CodeArtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CodeArtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_12 /* CodeArtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeArtTests.swift; sourceTree = "<group>"; };
+		OBJ_12 /* CodeArtColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeArtColorTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_9 /* CodeArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeArt.swift; sourceTree = "<group>"; };
+		OBJ_9 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +91,9 @@
 		OBJ_11 /* CodeArtTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_12 /* CodeArtTests.swift */,
+				OBJ_12 /* CodeArtColorTests.swift */,
 				OBJ_13 /* XCTestManifests.swift */,
+				0D46E6DC25573BE600ADA92E /* CodeArtNetworkingTests.swift */,
 			);
 			name = CodeArtTests;
 			path = Tests/CodeArtTests;
@@ -123,7 +130,9 @@
 		OBJ_8 /* CodeArt */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_9 /* CodeArt.swift */,
+				OBJ_9 /* ColorUtils.swift */,
+				0D46E6E22558957C00ADA92E /* Networking.swift */,
+				0D46E6D6255739AF00ADA92E /* CodeArt.swift */,
 			);
 			name = CodeArt;
 			path = Sources/CodeArt;
@@ -219,7 +228,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_23 /* CodeArt.swift in Sources */,
+				0D46E6E32558957C00ADA92E /* Networking.swift in Sources */,
+				0D46E6D7255739AF00ADA92E /* CodeArt.swift in Sources */,
+				OBJ_23 /* ColorUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,8 +246,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_41 /* CodeArtTests.swift in Sources */,
+				OBJ_41 /* CodeArtColorTests.swift in Sources */,
 				OBJ_42 /* XCTestManifests.swift in Sources */,
+				0D46E6DD25573BE600ADA92E /* CodeArtNetworkingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
