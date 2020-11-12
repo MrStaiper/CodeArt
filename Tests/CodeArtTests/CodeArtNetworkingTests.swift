@@ -15,6 +15,15 @@ class NetworkSessionMock: NetworkSession {
     func get(from url: URL, completitionHandler: @escaping (Data?, Error?) -> Void) {
         completitionHandler(data, error)
     }
+    
+    func post(with url: URLRequest, completetionHandler completitionHandler: @escaping (Data?, Error?) -> Void) {
+        completitionHandler(data, error)
+    }
+}
+
+struct MockData: Codable, Equatable {
+    var id: Int
+    var name: String
 }
 
 final class CodeArtNetworkingTests: XCTestCase {
@@ -41,7 +50,32 @@ final class CodeArtNetworkingTests: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
     
+    func testSendDataCall() {
+        let session = NetworkSessionMock()
+        let manager = CodeArt.Networking.Manager()
+        let mockObject = MockData(id: 1, name: "Willian")
+        let data = try? JSONEncoder().encode(mockObject)
+        
+        session.data = data
+        manager.session = session
+        
+        let url = URL(fileURLWithPath: "url")
+        let expectation = XCTestExpectation(description: "Sent data")
+        manager.sendData(to: url, body: mockObject) { result in
+            expectation.fulfill()
+            switch result {
+                case .success(let returnedData):
+                    let returnedObject = try? JSONDecoder().decode(MockData.self, from: returnedData)
+                    XCTAssertEqual(returnedObject, mockObject)
+                case .failure(let error):
+                    XCTFail(error?.localizedDescription ?? "error forming error result")
+            }
+        }
+        wait(for: [expectation], timeout: 5)
+    }
+    
     static var allTests = [
-        ("testExample", testLoadDataCell)
+        ("testLoadDataCell", testLoadDataCell),
+        ("testSendDataCall",testSendDataCall)
     ]
 }
