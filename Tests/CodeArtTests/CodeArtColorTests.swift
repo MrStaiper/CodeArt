@@ -16,6 +16,12 @@ final class CodeArtColorTests: XCTestCase {
         let color = CodeArt.ColorUtils.fromHexString(hex: "FCFFFD")
         XCTAssertEqual(color, CodeArt.ColorUtils.secondaryColor)
     }
+    
+    func testGradientView () {
+        let colors = [CodeArt.ColorUtils.fromHexString(hex: "006736"), CodeArt.ColorUtils.fromHexString(hex: "FCFFFD")]
+        let gradientView = CodeArt.ColorUtils.setGradientView(view: UIView(), colors: colors)
+        XCTAssertEqual(gradientView.backgroundColor, CodeArt.ColorUtils.setGradientView(view: UIView(), colors: colors).backgroundColor)
+    }
 
     static var allTests = [
         ("testColorPallete", testColorPallete),

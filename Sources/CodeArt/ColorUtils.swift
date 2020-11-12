@@ -34,5 +34,19 @@ extension CodeArt {
             }
             return UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
         }
+        
+        
+        /// Allows you to get a gradient view with two or more color
+        /// - Parameters:
+        ///   - view: A view you wanto to apply gradient effects
+        ///   - colors: Colors you want to add in your view
+        /// - Returns: A UIView with gradient layer
+        internal class func setGradientView(view: UIView, colors: [UIColor]) -> UIView {
+            let gradient = CAGradientLayer()
+            gradient.frame = view.bounds
+            gradient.colors = colors
+            view.layer.addSublayer(gradient)
+            return view
+        }
     }
 }

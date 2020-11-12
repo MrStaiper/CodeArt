@@ -52,6 +52,7 @@
 		0D46E6D6255739AF00ADA92E /* CodeArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeArt.swift; sourceTree = "<group>"; };
 		0D46E6DC25573BE600ADA92E /* CodeArtNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeArtNetworkingTests.swift; sourceTree = "<group>"; };
 		0D46E6E22558957C00ADA92E /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		0D46E6E9255CC7A600ADA92E /* CodeArt.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CodeArt.podspec; sourceTree = "<group>"; };
 		"CodeArt::CodeArt::Product" /* CodeArt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CodeArt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CodeArt::CodeArtTests::Product" /* CodeArtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CodeArtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* CodeArtColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeArtColorTests.swift; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				0D46E6E9255CC7A600ADA92E /* CodeArt.podspec */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_10 /* Tests */,
